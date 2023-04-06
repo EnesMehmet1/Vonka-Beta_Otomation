@@ -1,0 +1,12 @@
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityLayer.dll
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityFramework.dll
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityFramework.xml
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\obj\Debug\EntityLayer.dll
+C:\yzm\TRPLE_ACT\Trple1.1\EntityLayer\obj\Debug\EntityLayer.pdb

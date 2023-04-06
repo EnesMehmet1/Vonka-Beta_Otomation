@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{038DF09F-1F85-4A17-9039-1F9CAEBB5DFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IBrandDal.cs" />
+    <Compile Include="Abstract\ICariDal.cs" />
+    <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\ICategoryDetailDal.cs" />
+    <Compile Include="Abstract\IMarketCustomerProfileDal.cs" />
+    <Compile Include="Abstract\IProductDal.cs" />
+    <Compile Include="Abstract\IProductSalesDal.cs" />
+    <Compile Include="Abstract\IProductStockDal.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\ITypeSalesDal.cs" />
+    <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="EntityFramework\EfBrandDal.cs" />
+    <Compile Include="EntityFramework\EfCariDal.cs" />
+    <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfCategoryDetailDal.cs" />
+    <Compile Include="EntityFramework\EfMarketCustomerProfileDal.cs" />
+    <Compile Include="EntityFramework\EfProductDal.cs" />
+    <Compile Include="EntityFramework\EfProductSalesDal.cs" />
+    <Compile Include="EntityFramework\EfProductStockDal.cs" />
+    <Compile Include="EntityFramework\EfTypeSalesDal.cs" />
+    <Compile Include="Migrations\202302111629281_aa.cs" />
+    <Compile Include="Migrations\202302111629281_aa.designer.cs">
+      <DependentUpon>202302111629281_aa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302111632336_a.cs" />
+    <Compile Include="Migrations\202302111632336_a.designer.cs">
+      <DependentUpon>202302111632336_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302111642560_sevket.cs" />
+    <Compile Include="Migrations\202302111642560_sevket.designer.cs">
+      <DependentUpon>202302111642560_sevket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302111720322_sevket2.cs" />
+    <Compile Include="Migrations\202302111720322_sevket2.designer.cs">
+      <DependentUpon>202302111720322_sevket2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302112353239_ms.cs" />
+    <Compile Include="Migrations\202302112353239_ms.designer.cs">
+      <DependentUpon>202302112353239_ms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302121730520_ffa.cs" />
+    <Compile Include="Migrations\202302121730520_ffa.designer.cs">
+      <DependentUpon>202302121730520_ffa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131126589_mmf.cs" />
+    <Compile Include="Migrations\202302131126589_mmf.designer.cs">
+      <DependentUpon>202302131126589_mmf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302131809093_ms1.cs" />
+    <Compile Include="Migrations\202302131809093_ms1.designer.cs">
+      <DependentUpon>202302131809093_ms1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302161237380_a1.cs" />
+    <Compile Include="Migrations\202302161237380_a1.designer.cs">
+      <DependentUpon>202302161237380_a1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302162030539_af.cs" />
+    <Compile Include="Migrations\202302162030539_af.designer.cs">
+      <DependentUpon>202302162030539_af.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302181515446_msf.cs" />
+    <Compile Include="Migrations\202302181515446_msf.designer.cs">
+      <DependentUpon>202302181515446_msf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302191616077_a2.cs" />
+    <Compile Include="Migrations\202302191616077_a2.designer.cs">
+      <DependentUpon>202302191616077_a2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302191618033_afd.cs" />
+    <Compile Include="Migrations\202302191618033_afd.designer.cs">
+      <DependentUpon>202302191618033_afd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302201103498_hr.cs" />
+    <Compile Include="Migrations\202302201103498_hr.designer.cs">
+      <DependentUpon>202302201103498_hr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302211156328_mfo.cs" />
+    <Compile Include="Migrations\202302211156328_mfo.designer.cs">
+      <DependentUpon>202302211156328_mfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302241839436_asdff.cs" />
+    <Compile Include="Migrations\202302241839436_asdff.designer.cs">
+      <DependentUpon>202302241839436_asdff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242104241_ljgh.cs" />
+    <Compile Include="Migrations\202302242104241_ljgh.designer.cs">
+      <DependentUpon>202302242104241_ljgh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242122084_egt.cs" />
+    <Compile Include="Migrations\202302242122084_egt.designer.cs">
+      <DependentUpon>202302242122084_egt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242123186_gf.cs" />
+    <Compile Include="Migrations\202302242123186_gf.designer.cs">
+      <DependentUpon>202302242123186_gf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242140527_mfo1.cs" />
+    <Compile Include="Migrations\202302242140527_mfo1.designer.cs">
+      <DependentUpon>202302242140527_mfo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242151381_öfgh.cs" />
+    <Compile Include="Migrations\202302242151381_öfgh.designer.cs">
+      <DependentUpon>202302242151381_öfgh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242154228_petıjh.cs" />
+    <Compile Include="Migrations\202302242154228_petıjh.designer.cs">
+      <DependentUpon>202302242154228_petıjh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302242202206_ghn.cs" />
+    <Compile Include="Migrations\202302242202206_ghn.designer.cs">
+      <DependentUpon>202302242202206_ghn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252037587_mfodensabri.cs" />
+    <Compile Include="Migrations\202302252037587_mfodensabri.designer.cs">
+      <DependentUpon>202302252037587_mfodensabri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252056582_bfg.cs" />
+    <Compile Include="Migrations\202302252056582_bfg.designer.cs">
+      <DependentUpon>202302252056582_bfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252101295_zeno.cs" />
+    <Compile Include="Migrations\202302252101295_zeno.designer.cs">
+      <DependentUpon>202302252101295_zeno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252123516_phone.cs" />
+    <Compile Include="Migrations\202302252123516_phone.designer.cs">
+      <DependentUpon>202302252123516_phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303231425450_mfsa.cs" />
+    <Compile Include="Migrations\202303231425450_mfsa.designer.cs">
+      <DependentUpon>202303231425450_mfsa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303231427302_ldfgk.cs" />
+    <Compile Include="Migrations\202303231427302_ldfgk.designer.cs">
+      <DependentUpon>202303231427302_ldfgk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{62cc0686-44bd-40b7-84bb-a5f4d9ee8015}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302111629281_aa.resx">
+      <DependentUpon>202302111629281_aa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302111632336_a.resx">
+      <DependentUpon>202302111632336_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302111642560_sevket.resx">
+      <DependentUpon>202302111642560_sevket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302111720322_sevket2.resx">
+      <DependentUpon>202302111720322_sevket2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302112353239_ms.resx">
+      <DependentUpon>202302112353239_ms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302121730520_ffa.resx">
+      <DependentUpon>202302121730520_ffa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131126589_mmf.resx">
+      <DependentUpon>202302131126589_mmf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302131809093_ms1.resx">
+      <DependentUpon>202302131809093_ms1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302161237380_a1.resx">
+      <DependentUpon>202302161237380_a1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302162030539_af.resx">
+      <DependentUpon>202302162030539_af.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302181515446_msf.resx">
+      <DependentUpon>202302181515446_msf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302191616077_a2.resx">
+      <DependentUpon>202302191616077_a2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302191618033_afd.resx">
+      <DependentUpon>202302191618033_afd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201103498_hr.resx">
+      <DependentUpon>202302201103498_hr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302211156328_mfo.resx">
+      <DependentUpon>202302211156328_mfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302241839436_asdff.resx">
+      <DependentUpon>202302241839436_asdff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242104241_ljgh.resx">
+      <DependentUpon>202302242104241_ljgh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242122084_egt.resx">
+      <DependentUpon>202302242122084_egt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242123186_gf.resx">
+      <DependentUpon>202302242123186_gf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242140527_mfo1.resx">
+      <DependentUpon>202302242140527_mfo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242151381_öfgh.resx">
+      <DependentUpon>202302242151381_öfgh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242154228_petıjh.resx">
+      <DependentUpon>202302242154228_petıjh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302242202206_ghn.resx">
+      <DependentUpon>202302242202206_ghn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252037587_mfodensabri.resx">
+      <DependentUpon>202302252037587_mfodensabri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252056582_bfg.resx">
+      <DependentUpon>202302252056582_bfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252101295_zeno.resx">
+      <DependentUpon>202302252101295_zeno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252123516_phone.resx">
+      <DependentUpon>202302252123516_phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303231425450_mfsa.resx">
+      <DependentUpon>202303231425450_mfsa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303231427302_ldfgk.resx">
+      <DependentUpon>202303231427302_ldfgk.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
